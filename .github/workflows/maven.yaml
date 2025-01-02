@@ -114,7 +114,7 @@ jobs:
       - name: Release it
         run: |
           export PREV_VERSION=$(gh release list | grep Latest | awk '{print $3}')
-          gh release create v$NEW_VERSION --title v$NEW_VERSION --notes-start-tag $PREV_VERSION --generate-notes --latest ./formio-plugin.zip ./deploy-plugin.zip
+          gh release create v$NEW_VERSION --title v$NEW_VERSION --notes-start-tag $PREV_VERSION --generate-notes --latest
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NEW_VERSION: ${{ needs.build-maven.outputs.version }}

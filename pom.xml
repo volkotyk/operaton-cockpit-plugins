@@ -35,4 +35,11 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>volkotyk</name>
+      <url>https://maven.pkg.github.com/volkotyk/operaton-cockpit-plugins</url>
+    </repository>
+  </distributionManagement>
 </project>
