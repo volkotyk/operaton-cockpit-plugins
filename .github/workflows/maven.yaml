@@ -68,7 +68,7 @@ jobs:
       - name: test and build JAR
         run: |
           mkdir -p ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts
-          cp -r ./* ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts
+          cp -r ./* ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts || true
           mvn package -ntp
       - name: Upload new versions in maven registry
         run: |
