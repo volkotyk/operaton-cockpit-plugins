@@ -67,7 +67,8 @@ jobs:
           NEW_VERSION: ${{ steps.version.outputs.version }}
       - name: test and build JAR
         run: |
-          cp ./* ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts
+          mkdir -p ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts
+          cp -r ./* ./src/main/resources/META-INF/resources/webjars/camunda/app/cockpit/scripts
           mvn package -ntp
       - name: Upload new versions in maven registry
         run: |
