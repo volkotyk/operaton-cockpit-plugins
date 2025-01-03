@@ -4,7 +4,7 @@
 
   <groupId>com.datakurre</groupId> <!-- Add your groupId here -->
   <artifactId>mini-history-plugin</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>mini-history-plugin</name>
